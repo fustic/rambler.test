@@ -1,43 +1,42 @@
 <!doctype html>
-<html lang="en" ng-app="journal" data-framework="angularjs">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<html lang="en" ng-app="liveJournal" data-framework="angularjs">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body ng-controller="LiveJournalCtrl">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body ng-controller="JournalCtrl">
-
-        <div class="jumbotron">
-          <div class="container">
-            <h1>LiveJournal sample!</h1>
-          </div>
-        </div>
-
+    <div class="jumbotron">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
+            <h1>LiveJournal sample!</h1>
+        </div>
+    </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" ng-repeat="post in posts | limitTo: postLimit">
+                <p>{{post.subject}}</p>
             </div>
-          </div>
-
-          <hr>
-
-          <footer>
-            <p>&copy; Vadim Ivanov 2013 <a href="mailto:ivanovvvadim@gmail.com">ivanovvvadim@gmail.com</a></p>
-          </footer>
         </div>
 
-        <script src="js/vendor/angular.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/services/journalStorage.js"></script>
-        <script src="js/controllers/journalCtrl.js"></script>
+        <hr>
+
+        <footer>
+            <p>&copy; Vadim Ivanov 2013 <a href="mailto:ivanovvvadim@gmail.com">ivanovvvadim@gmail.com</a></p>
+        </footer>
+    </div>
+
+<script src="js/vendor/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services/liveJournalStorage.js"></script>
+<script src="js/controllers/liveJournalCtrl.js"></script>
 
 
-    </body>
+</body>
 </html>

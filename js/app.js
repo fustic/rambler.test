@@ -3,8 +3,8 @@
 'use strict';
 
 /**
- * The main lJournal app module
+ * The main BookStore app module
  *
  * @type {angular.Module}
  */
-var journal = angular.module('journal', []);
+var liveJournal = angular.module('liveJournal', []);
