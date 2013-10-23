@@ -6,12 +6,22 @@
 */
 liveJournal.factory('liveJournalStorage', function ($http) {
 	var STORAGE_ID = 'live-journal-posts',
+        READ_POSTS_ID = 'live-journal-read-posts',
+        HIDDEN_AUTH_ID = 'live-journal-hidden-authors',
+        SHOW_MODEL_ID = 'live-journal-show-model',
         d = new Date(), requestId;
     d = new Date(d.getFullYear(), d.getMonth(), d.getDate());
-    requestId = d.getTime();;
+    requestId = d.getTime();
+
+    function loadFromStorage(storageID){
+        return JSON.parse(localStorage.getItem(storageID) || '{}');
+    };
+    function saveToStorage(storageID, entries){
+        localStorage.setItem(storageID, JSON.stringify(entries));
+    }
 	return {
 		get: function () {
-			return JSON.parse(localStorage.getItem(STORAGE_ID) || '[]');
+			return loadFromStorage(STORAGE_ID);
 		},
         getPosts: function () {
 
@@ -37,8 +47,27 @@ liveJournal.factory('liveJournalStorage', function ($http) {
 
             });
         },
-		put: function (books) {
-			localStorage.setItem(STORAGE_ID, JSON.stringify(books));
-		}
+        getReadPosts: function(){
+            return loadFromStorage(READ_POSTS_ID);
+        },
+        putReadPosts: function(posts){
+            saveToStorage(READ_POSTS_ID, posts);
+        },
+        getHiddenAuthors: function(){
+            return loadFromStorage(HIDDEN_AUTH_ID);
+        },
+        putHiddenAuthors: function(authors){
+            saveToStorage(HIDDEN_AUTH_ID, authors);
+        },
+        getShowModel: function(){
+            var model = loadFromStorage(SHOW_MODEL_ID);
+            return Object.getOwnPropertyNames(model).length === 0 ? {
+                isShowReadPosts: false,
+                isShowHiddenAuthors: false
+            } : model;
+        },
+        putShowModel: function(model){
+            saveToStorage(SHOW_MODEL_ID, model);
+        }
 	};
 });

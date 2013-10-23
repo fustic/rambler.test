@@ -7,4 +7,4 @@
  *
  * @type {angular.Module}
  */
-var liveJournal = angular.module('liveJournal', []);
+var liveJournal = angular.module('liveJournal', ['infinite-scroll']);
