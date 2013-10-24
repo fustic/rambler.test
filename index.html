@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" ng-app="liveJournal" data-framework="angularjs">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body ng-controller="LiveJournalCtrl">
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>LiveJournal sample!</h1>
+            <p>
+                <button class="btn btn-primary btn-sm" ng-show="!showModel.isShowReadPosts" ng-click="showReadPosts()">Show read posts</button>
+                <button class="btn btn-primary btn-sm" ng-show="showModel.isShowReadPosts" ng-click="hideReadPosts()">Hide read posts</button>
+
+                <button class="btn btn-primary btn-sm" ng-show="!showModel.isShowHiddenAuthors" ng-click="showBannedAuthor()">Show banned authors</button>
+                <button class="btn btn-primary btn-sm" ng-show="showModel.isShowHiddenAuthors" ng-click="hideBannedAuthor()">Hide banned authors</button>
+            </p>
+        </div>
+    </div>
+
+    <div class="container" infinite-scroll='loadMore()'>
+        <div class="row" ng-repeat="post in posts | limitTo: postLimit | filter:{isShow:'true'}">
+            <article class="col-lg-12" ng-class="{readpost : post.isRead, hiddenauthor: post.isHidden}">
+                <span>{{$index + 1}}. </span>
+                <h3>{{post.subject}}</h3> —
+                <a ng-href="{{post.ljuser[0].profile_url}}"><img ng-src="{{post.ljuser[0].userhead_url}}" /></a>
+                <a ng-href="{{post.ljuser[0].journal_url}}">{{post.ljuser[0].journal}}</a>
+                <span> | {{post.time}}</span>
+
+                <button ng-show="post.isHidden" class="btn btn-default btn-xs" ng-click="unBanAuthor(post)">Return from ban all articles by this author</button>
+                <button ng-show="!post.isHidden" class="btn btn-default btn-xs" ng-click="banAuthor(post)">Ban all articles by this author</button>
+
+                <div class="post-body" ng-bind-html-unsafe="post.body"></div>
+                <div class="post-buttons">
+                    <button class="btn btn-default btn-xs" ng-show="post.isRead" ng-click="unReadPost(post)">Mark as unread</button>
+                    <button class="btn btn-default btn-xs" ng-show="!post.isRead" ng-click="readPost(post)">Mark as read</button>
+                </div>
+            </article>
+        </div>
+
+        <hr>
+
+        <footer>
+            <p>&copy; Vadim Ivanov 2013 <a href="mailto:ivanovvvadim@gmail.com">ivanovvvadim@gmail.com</a></p>
+        </footer>
+    </div>
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/ng-infinite-scroll.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services/liveJournalStorage.js"></script>
+    <script src="js/controllers/liveJournalCtrl.js"></script>
+
+
+</body>
+</html>

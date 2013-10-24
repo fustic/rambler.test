@@ -1,0 +1,4 @@
+h3 {display: inline;}
+article {margin-bottom: 15px; border-bottom: 1px dotted #eee;padding-bottom: 5px;}
+article.readpost {color: #666; border: 1px solid #D8D8D8; border-radius: 5px;}
+article.hiddenauthor {color: #999; border: 1px solid #D8D8D8; border-radius: 5px;}
