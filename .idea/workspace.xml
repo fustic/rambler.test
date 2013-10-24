@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="94" selection-start="997" selection-end="1016" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="1020">
+            <state line="57" column="40" selection-start="3057" selection-end="3057" vertical-scroll-proportion="0.78346455" vertical-offset="258" max-vertical-offset="1020">
               <folding />
             </state>
           </provider>
@@ -41,13 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="liveJournalCtrl.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="liveJournalCtrl.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/controllers/liveJournalCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="45" selection-start="442" selection-end="442" vertical-scroll-proportion="0.20650813" vertical-offset="0" max-vertical-offset="1230">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="61" column="6" selection-start="1980" selection-end="1980" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,10 +53,8 @@
       <file leaf-file-name="liveJournalStorage.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/services/liveJournalStorage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="35" selection-start="2217" selection-end="2236" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1185">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="44" column="21" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="1185">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,8 +80,9 @@
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/css/app.css" />
         <option value="$PROJECT_DIR$/js/services/liveJournalStorage.js" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/filters/liveJournalPosts.js" />
         <option value="$PROJECT_DIR$/js/controllers/liveJournalCtrl.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -313,6 +310,48 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/controllers/liveJournalCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="0" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/services/liveJournalStorage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="21" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="94" selection-start="997" selection-end="1016" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="53" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/liveJournalCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="45" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/services/liveJournalStorage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="35" selection-start="2217" selection-end="2236" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="0" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="735">
@@ -322,11 +361,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="37" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="240">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="9" column="37" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="240" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/vendor/angular.min.js">
@@ -338,18 +373,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap-theme.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="742">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="742" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="67" selection-start="197" selection-end="197" vertical-scroll-proportion="0.17880794" vertical-offset="0" max-vertical-offset="755">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="9" column="67" selection-start="197" selection-end="197" vertical-scroll-proportion="0.17880794" vertical-offset="0" max-vertical-offset="755" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/app.css">
@@ -361,26 +390,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/services/liveJournalStorage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="35" selection-start="2217" selection-end="2236" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1185">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="94" selection-start="997" selection-end="1016" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="1020">
+        <state line="44" column="21" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1185">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers/liveJournalCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="45" selection-start="442" selection-end="442" vertical-scroll-proportion="0.20650813" vertical-offset="0" max-vertical-offset="1230">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="61" column="6" selection-start="1980" selection-end="1980" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="40" selection-start="3057" selection-end="3057" vertical-scroll-proportion="0.78346455" vertical-offset="258" max-vertical-offset="1020">
+          <folding />
         </state>
       </provider>
     </entry>

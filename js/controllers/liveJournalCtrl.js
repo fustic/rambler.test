@@ -32,45 +32,60 @@ liveJournal.controller('LiveJournalCtrl', function LiveJournalCtrl($scope, $loca
         banAuthor(post, false);
     }
 
-    $scope.unReadPost = function(postId, $index){
-        readPost(postId, $index, false);
+    $scope.unReadPost = function(post){
+        readPost(post, false);
     }
-    $scope.readPost = function(postId, $index){
-        readPost(postId, $index, true);
+    $scope.readPost = function(post){
+        readPost(post, true);
     }
 
     $scope.hideReadPosts = function(){
         showModel["isShowReadPosts"] = false;
         liveJournalStorage.putShowModel(showModel);
+        updateRetrievedData();
     }
     $scope.showReadPosts = function(){
         showModel["isShowReadPosts"] = true;
         liveJournalStorage.putShowModel(showModel);
+        updateRetrievedData();
     }
 
     $scope.showBannedAuthor = function(){
         showModel["isShowHiddenAuthors"] = true;
         liveJournalStorage.putShowModel(showModel);
+        updateRetrievedData();
     };
     $scope.hideBannedAuthor = function(){
         showModel["isShowHiddenAuthors"] = false;
         liveJournalStorage.putShowModel(showModel);
+        updateRetrievedData();
     };
 
-    function readPost(postId, $index, setValue){
-        posts[$index].isRead = setValue;
-        readPosts[postId] = setValue;
+
+    function readPost(post, setValue){
+        post.isRead = setValue;
+        readPosts[post.post_id] = setValue;
         liveJournalStorage.putReadPosts(readPosts);
+        updatePostVisiblity(post);
     };
+
     function banAuthor(post, setValue){
-        hiddenAuthors[post.journal_id + "-"+post.ljuser[0].username] = setValue;
+        hiddenAuthors[post.journal_id] = setValue;
         liveJournalStorage.putHiddenAuthors(hiddenAuthors);
         updateRetrievedData();
     };
     function updateRetrievedData(){
         $scope.posts.forEach(function(post){
             post.isRead = readPosts[post.post_id];
-            post.isHidden = hiddenAuthors[post.journal_id + "-"+post.ljuser[0].username];
+            post.isHidden = hiddenAuthors[post.journal_id];
+            updatePostVisiblity(post);
         });
+    }
+
+    function updatePostVisiblity(post){
+        var isShowRead = !post.isRead || (post.isRead && showModel.isShowReadPosts),
+            isShowHide = !post.isHidden || (post.isHidden && showModel.isShowHiddenAuthors);
+
+        post.isShow = isShowHide && isShowRead;
     }
 });

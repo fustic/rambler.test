@@ -26,7 +26,7 @@
     </div>
 
     <div class="container" infinite-scroll='loadMore()'>
-        <div class="row" ng-repeat="post in posts | limitTo: postLimit">
+        <div class="row" ng-repeat="post in posts | limitTo: postLimit | filter:{isShow:'true'}">
             <article class="col-lg-12" ng-class="{readpost : post.isRead, hiddenauthor: post.isHidden}">
                 <span>{{$index + 1}}. </span>
                 <h3>{{post.subject}}</h3> —
@@ -39,8 +39,8 @@
 
                 <div class="post-body" ng-bind-html-unsafe="post.body"></div>
                 <div class="post-buttons">
-                    <button class="btn btn-default btn-xs" ng-show="post.isRead" ng-click="unReadPost(post.post_id, $index)">Mark as unread</button>
-                    <button class="btn btn-default btn-xs" ng-show="!post.isRead" ng-click="readPost(post.post_id, $index)">Mark as read</button>
+                    <button class="btn btn-default btn-xs" ng-show="post.isRead" ng-click="unReadPost(post)">Mark as unread</button>
+                    <button class="btn btn-default btn-xs" ng-show="!post.isRead" ng-click="readPost(post)">Mark as read</button>
                 </div>
             </article>
         </div>
